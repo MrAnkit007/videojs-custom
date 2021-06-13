@@ -1,19 +1,17 @@
 /*
   Player Skin Designer for Video.js
   http://videojs.com
-
   To customize the player skin edit 
   the CSS below. Click "details" 
   below to add comments or questions.
   This file uses some SCSS. Learn more  
   at http://sass-lang.com/guide)
-
   This designer can be linked to at:
   https://codepen.io/heff/pen/EarCt/left/?editors=010
 */
 
 // The following are SCSS variables to automate some of the values.
-// But don't feel limited by them. Change/replace whatever you want.
+// But don't feel limited by them. Change/replace whatever you want. 
 // The color of icons, text, and the big play button border.
 // Try changing to #0f0
 $primary-foreground-color: #cacaca; // #fff default
@@ -29,20 +27,13 @@ $controls-margin: 2em;
 // Make a slightly lighter version of the main background
 // for the slider background.
 $slider-bg-color: lighten($primary-background-color, 3%);
-$progress-position: -2.5em;
+$progress-position:-2.5em;
 @font-face {
   font-family: nf-icon;
   src: url(https://assets.nflxext.com/ffe/siteui/fonts/nf-icon-v1-86.eot);
-  src: url(https://assets.nflxext.com/ffe/siteui/fonts/nf-icon-v1-86.eot?#iefix)
-      format("embedded-opentype"),
-    url(https://assets.nflxext.com/ffe/siteui/fonts/nf-icon-v1-86.woff)
-      format("woff"),
-    url(https://assets.nflxext.com/ffe/siteui/fonts/nf-icon-v1-86.ttf)
-      format("truetype"),
-    url(https://assets.nflxext.com/ffe/siteui/fonts/nf-icon-v1-86.svg#nf-icon-v1-86)
-      format("svg");
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/nf-icon-v1-86.eot?#iefix) format('embedded-opentype'), url(https://assets.nflxext.com/ffe/siteui/fonts/nf-icon-v1-86.woff) format('woff'), url(https://assets.nflxext.com/ffe/siteui/fonts/nf-icon-v1-86.ttf) format('truetype'), url(https://assets.nflxext.com/ffe/siteui/fonts/nf-icon-v1-86.svg#nf-icon-v1-86) format('svg');
   font-weight: 400;
-  font-style: normal;
+  font-style: normal
 }
 
 .video-js {
@@ -53,6 +44,7 @@ $progress-position: -2.5em;
   /* The main font color changes the ICON COLORS as well as the text */
   color: $primary-foreground-color;
 }
+
 
 /* The "Big Play Button" is the play button that shows before the video plays.
    To center it set the align values to center and middle. The typical location
@@ -80,7 +72,8 @@ $progress-position: -2.5em;
   border-radius: 50%;
   @if $big-play-button {
     display: block;
-  } @else {
+  }
+  @else {
     display: none;
   }
   @if $center-big-play-button {
@@ -89,7 +82,8 @@ $progress-position: -2.5em;
     top: 40%;
     margin-left: -($big-play-width / 2);
     margin-top: -($big-play-height / 2);
-  } @else {
+  }
+  @else {
     /* Align top left. 0.5em = 15px default */
     left: 0.5em;
     top: 0.5em;
@@ -117,6 +111,7 @@ $progress-position: -2.5em;
   }
 }
 
+
 /* The default color of control backgrounds is mostly black but with a little
    bit of blue so it can still be seen on all-black video frames, which are common. */
 
@@ -126,27 +121,27 @@ $progress-position: -2.5em;
   }
   &.vjs-play-control {
     &:before {
-      content: "\e646";
+      content: '\e646';
     }
     &.vjs-playing {
       &:before {
-        content: "\e645";
+        content: '\e645';
       }
     }
   }
   &.vjs-fullscreen-control {
     &:before {
-      content: "\e642";
+      content: '\e642';
     }
   }
   &.vjs-volume-menu-button {
     &:before {
-      content: "\e630";
+      content: '\e630';
     }
   }
   &.vjs-captions-button {
     &:before {
-      content: "\e650";
+      content: '\e650';
     }
   }
 }
@@ -173,8 +168,8 @@ $progress-position: -2.5em;
       top: $progress-position;
     }
   }
-
-  .vjs-menu {
+  
+  .vjs-menu{
     z-index: 2;
     height: 100%;
   }
@@ -182,7 +177,7 @@ $progress-position: -2.5em;
 
 .video-js.vjs-fullscreen {
   .vjs-control-bar {
-    bottom: $controls-margin * 2;
+     bottom: $controls-margin * 2;
   }
 }
 
@@ -192,6 +187,7 @@ $progress-position: -2.5em;
   right: 0;
   top: $progress-position;
 }
+
 
 /* Slider - used for Volume bar and Progress bar */
 
@@ -206,6 +202,7 @@ $progress-position: -2.5em;
   flex: 1;
   text-align: left;
 }
+
 
 /* The slider bar color is used for the progress bar and the volume bar
    (the first two can be removed after a fix that's coming) */
@@ -222,7 +219,7 @@ $progress-position: -2.5em;
   background: $secondary-foreground-color;
   font-size: 1.3em;
   &:before {
-    transition: width 0.1s ease-out, height 0.1s ease-out;
+    transition: width .1s ease-out, height .1s ease-out;
     content: "";
     top: -0.2em;
     border: 0;
@@ -247,12 +244,10 @@ $progress-position: -2.5em;
   right: 0;
   width: 100%;
   padding: 0 4em 0 0.4em;
-
+ 
   top: $progress-position + 0.2em;
   border-radius: 1em;
-  transition: top 150ms linear, opacity 150ms linear, transform 150ms linear,
-    -webkit-transform 150ms linear, -moz-transform 150ms linear,
-    -o-transform 150ms linear;
+  transition: top 150ms linear, opacity 150ms linear, transform 150ms linear, -webkit-transform 150ms linear, -moz-transform 150ms linear, -o-transform 150ms linear;
   z-index: 1;
   opacity: 0;
   &:hover {
@@ -270,9 +265,9 @@ $progress-position: -2.5em;
       width: 0;
       position: absolute;
       border-top-color: #262626;
-      border-width: 0.8em;
+      border-width: .8em;
       right: 25%;
-      margin-left: -0.8em;
+      margin-left: -.8em;
     }
   }
 }
@@ -288,9 +283,9 @@ $progress-position: -2.5em;
     width: 0;
     position: absolute;
     border-top-color: #262626;
-    border-width: 0.8em;
+    border-width: .8em;
     right: 25%;
-    margin-left: -0.8em;
+    margin-left: -.8em;
   }
 }
 
@@ -303,6 +298,7 @@ $progress-position: -2.5em;
   height: 0.9em;
 }
 
+
 /* The main progress bar also has a bar that shows how much has been loaded. */
 
 .video-js .vjs-load-progress {
@@ -314,6 +310,7 @@ $progress-position: -2.5em;
   border-radius: 1em;
   height: 0.9em !important;
 }
+
 
 /* The load progress bar also has internal divs that represent
    smaller disconnected loaded time ranges */
@@ -350,8 +347,7 @@ $progress-position: -2.5em;
 
 .vjs-seeking .vjs-loading-spinner:after,
 .vjs-waiting .vjs-loading-spinner:after {
-  animation: vjs-spinner-spin 1.1s linear infinite,
-    vjs-spinner-fade 1.1s linear 1 !important;
+  animation: vjs-spinner-spin 1.1s linear infinite, vjs-spinner-fade 1.1s linear 1 !important;
   animation-delay: 2s;
 }
 
