@@ -1,0 +1,19 @@
+#overlay {
+  width:590px;
+  height:500px;
+  z-index: 1;
+  background-color:rgba(255,255,0,0.1);
+}
+iframe {
+  width:600px;
+  height:500px;
+
+}
+#container {
+  position: relative;
+}
+#overlay, iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
